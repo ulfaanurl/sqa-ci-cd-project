@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Demo</title>
+</head>
+<body>
+  <h1>Login</h1>
+
+  <form id="login-form">
+    <label for="username">Username</label>
+    <input id="username" name="username" required>
+
+    <label for="password">Password</label>
+    <input id="password" name="password"
+           type="password" required>
+
+    <button type="submit">Masuk</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    document.getElementById('login-form')
+      .addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const username =
+          document.getElementById('username').value;
+        const password =
+          document.getElementById('password').value;
+
+        if (username === 'mahasiswa' &&
+            password === 'sqa123') {
+          document.getElementById('message').textContent =
+            'Login berhasil';
+        } else {
+          document.getElementById('message').textContent =
+            'Username atau password salah';
+        }
+      });
+  </script>
+</body>
+</html>
