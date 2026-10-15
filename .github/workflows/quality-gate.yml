@@ -34,6 +34,7 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           token: ${{8b6caed6-abe5-4956-ad13-beaa5219b031}}
+          files: ./coverage/lcov.info
       
   e2e-test:
     name: E2E Test
